@@ -1,0 +1,22 @@
+{
+  "name": "amazon-affiliate-site",
+  "version": "1.0.0",
+  "description": "Site d'affiliation Amazon avec Product Advertising API",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "export": "next build && next export"
+  },
+  "dependencies": {
+    "axios": "^1.7.9",
+    "gray-matter": "^4.0.3",
+    "next": "^15.1.5",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-markdown": "^9.0.2"
+  },
+  "keywords": ["amazon", "affiliation", "e-commerce"],
+  "author": "",
+  "license": "MIT"
+}
