@@ -5,7 +5,8 @@ export default function Header() {
     <header className="header">
       <div className="container">
         <Link href="/" className="logo">
-          <h1>Tech Deals</h1>
+          <div className="logo-icon">🎧</div>
+          <h1>Amazon Home Studio</h1>
         </Link>
         <nav className="nav">
           <Link href="/articles">Articles</Link>

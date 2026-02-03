@@ -5,8 +5,14 @@ export default function Home({ latestContent }) {
   return (
     <div className="container">
       <section className="hero">
-        <h1>Découvrez les Meilleurs Produits Tech</h1>
-        <p>Reviews détaillées, comparatifs et guides d'achat pour faire le meilleur choix</p>
+        <div className="hero-badge">🎧 Guide Expert Home Studio</div>
+        <h1>
+          Équipez votre <span>Home Studio</span> avec les meilleurs produits
+        </h1>
+        <p>
+          Reviews détaillées, comparatifs experts et guides d'achat pour créer 
+          votre studio d'enregistrement professionnel
+        </p>
       </section>
 
       <section className="latest-content">
@@ -36,16 +42,16 @@ export default function Home({ latestContent }) {
         <h2>Parcourir par catégorie</h2>
         <div className="category-grid">
           <Link href="/articles" className="category-card">
-            <h3>📝 Articles</h3>
-            <p>Guides et conseils d'achat</p>
+            <h3>📝 Articles & Guides</h3>
+            <p>Conseils experts et guides d'achat détaillés pour votre home studio</p>
           </Link>
           <Link href="/reviews" className="category-card">
-            <h3>⭐ Reviews</h3>
-            <p>Tests détaillés de produits</p>
+            <h3>⭐ Reviews Produits</h3>
+            <p>Tests approfondis et analyses détaillées d'équipements audio</p>
           </Link>
           <Link href="/comparatifs" className="category-card">
             <h3>📊 Comparatifs</h3>
-            <p>Comparez les meilleurs produits</p>
+            <p>Comparez les meilleurs produits côte à côte pour faire le bon choix</p>
           </Link>
         </div>
       </section>
