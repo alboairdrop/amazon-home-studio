@@ -50,7 +50,40 @@ export default function ContentPage({ content, relatedArticles }) {
         )}
 
         <div className="article-content">
-          <ReactMarkdown>{content.content}</ReactMarkdown>
+          <ReactMarkdown
+            components={{
+              img: ({node, ...props}) => (
+                <img 
+                  {...props} 
+                  style={{maxWidth: '100%', height: 'auto', margin: '2rem 0', borderRadius: '8px'}} 
+                  loading="lazy"
+                />
+              ),
+              a: ({node, ...props}) => {
+                // Style Amazon links with orange button if they contain keywords
+                const isAmazonCTA = props.children && (
+                  String(props.children).includes('Voir') || 
+                  String(props.children).includes('Amazon') ||
+                  String(props.children).includes('👉')
+                );
+                
+                if (isAmazonCTA) {
+                  return (
+                    <a 
+                      {...props} 
+                      className="amazon-cta-button" 
+                      target="_blank" 
+                      rel="noopener noreferrer nofollow"
+                    />
+                  );
+                }
+                
+                return <a {...props} target="_blank" rel="noopener noreferrer nofollow" />;
+              }
+            }}
+          >
+            {content.content}
+          </ReactMarkdown>
         </div>
 
         {/* ProductPick style Wirecutter pour produits avec "pick" */}
